@@ -20,3 +20,27 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/font/
+
+  fonts:
+    - family: Plus Jakarta Sans
+      fonts:
+        - asset: assets/font/PlusJakartaSans-ExtraBoldItalic.ttf
+          style: italic
+        - asset: assets/font/PlusJakartaSans-ExtraBold.ttf
+        - asset: assets/font/PlusJakartaSans-BoldItalic.ttf
+          style: italic
+        - asset: assets/font/PlusJakartaSans-Bold.ttf
+        - asset: assets/font/PlusJakartaSans-MediumItalic.ttf
+          style: italic
+        - asset: assets/font/PlusJakartaSans-Medium.ttf
+        - asset: assets/font/PlusJakartaSans-Italic.ttf
+          style: italic
+        - asset: assets/font/PlusJakartaSans-Regular.ttf
+        - asset: assets/font/PlusJakartaSans-LightItalic.ttf
+          style: italic
+        - asset: assets/font/PlusJakartaSans-Light.ttf
+        - asset: assets/font/PlusJakartaSans-ExtraLightItalic.ttf
+          style: italic
+        - asset: assets/font/PlusJakartaSans-ExtraLight.ttf
