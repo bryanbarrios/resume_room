@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:resume_room/src/core/ui/theme/theme.dart';
+import 'package:resume_room/src/features/home/home.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    return ScreenUtilInit(
+      designSize: const Size(360, 800),
+      builder: () => const _App(),
+    );
+  }
+}
+
+class _App extends StatelessWidget {
+  const _App({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Resume Room',
-      theme: ThemeData(
-        fontFamily: 'Plus Jakarta Sans',
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Resume Room'),
-        ),
-      ),
+      theme: AppTheme.lightTheme(context),
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
     );
   }
 }
