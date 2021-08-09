@@ -29,6 +29,14 @@ class HomePage extends StatelessWidget {
               onPressed: null,
               child: Text("Disabled Button"),
             ),
+            TextButton(
+              onPressed: () => "pressed",
+              child: const Text("Enabled Button"),
+            ),
+            const TextButton(
+              onPressed: null,
+              child: Text("Disabled Button"),
+            ),
           ],
         ),
       ),
