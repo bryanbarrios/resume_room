@@ -37,6 +37,50 @@ class HomePage extends StatelessWidget {
               onPressed: null,
               child: Text("Disabled Button"),
             ),
+            SizedBox(
+              width: double.infinity,
+              child: TextFormField(
+                autofocus: false,
+                decoration: const InputDecoration(
+                  labelText: "Enabled Input",
+                  hintText: "Enter a text",
+                  helperText: "Helper text",
+                ),
+              ),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: TextFormField(
+                autofocus: false,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: "Obscure Input",
+                  hintText: "Enter a text",
+                ),
+              ),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: TextFormField(
+                autofocus: false,
+                decoration: const InputDecoration(
+                  labelText: "Input with errors",
+                  hintText: "Enter a text",
+                  errorText: "Input errors",
+                ),
+              ),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: TextFormField(
+                autofocus: false,
+                enabled: false,
+                decoration: const InputDecoration(
+                  labelText: "Disabled Input",
+                  hintText: "Enter a text",
+                ),
+              ),
+            ),
           ],
         ),
       ),
