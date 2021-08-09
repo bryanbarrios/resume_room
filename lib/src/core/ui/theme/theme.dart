@@ -9,21 +9,22 @@ enum ThemeType { light, dark }
 class AppTheme {
   static ThemeData lightTheme(BuildContext context) {
     return ThemeData.light().copyWith(
-      brightness: Brightness.light,
-      primaryColor: KColors.primary,
-      primaryColorLight: KColors.primaryLightColor,
-      primaryColorDark: KColors.primaryDarkColor,
-      buttonColor: KColors.primary,
-      textTheme: _textTheme(context),
-      elevatedButtonTheme: _elevatedButtonTheme(context),
-    );
+        brightness: Brightness.light,
+        primaryColor: KColors.primary,
+        primaryColorLight: KColors.primaryLightColor,
+        primaryColorDark: KColors.primaryDarkColor,
+        buttonColor: KColors.primary,
+        textTheme: _textTheme(context),
+        elevatedButtonTheme: _elevatedButtonThemeData(context),
+        outlinedButtonTheme: _outlinedButtonThemeData(context));
   }
 
   static ThemeData get darkTheme {
     return ThemeData.dark().copyWith();
   }
 
-  static ElevatedButtonThemeData _elevatedButtonTheme(BuildContext context) {
+  static ElevatedButtonThemeData _elevatedButtonThemeData(
+      BuildContext context) {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.resolveWith<Color>(
@@ -45,16 +46,59 @@ class AppTheme {
                 fontFamily: 'Plus Jakarta Sans',
               ),
         ),
-        minimumSize: MaterialStateProperty.all<Size>(
-          const Size(double.infinity, 52),
-        ),
         padding: MaterialStateProperty.all<EdgeInsets>(
-          const EdgeInsets.all(12),
+          const EdgeInsets.all(16),
         ),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         ),
         elevation: MaterialStateProperty.all<double>(0),
+      ),
+    );
+  }
+
+  static OutlinedButtonThemeData _outlinedButtonThemeData(
+      BuildContext context) {
+    return OutlinedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
+        foregroundColor: MaterialStateProperty.resolveWith<Color>(
+          (states) => states.contains(MaterialState.disabled)
+              ? KColors.blueGray
+              : KColors.primary,
+        ),
+        textStyle: MaterialStateProperty.all<TextStyle>(
+          TextStyles.textBase(context)
+              .copyWith(
+                fontWeight: FontWeight.w600,
+              )
+              .apply(
+                fontFamily: 'Plus Jakarta Sans',
+              ),
+        ),
+        padding: MaterialStateProperty.all<EdgeInsets>(
+          const EdgeInsets.all(16),
+        ),
+        shape: MaterialStateProperty.resolveWith<RoundedRectangleBorder>(
+          (states) => states.contains(MaterialState.disabled)
+              ? RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+              : RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        ),
+        side: MaterialStateProperty.resolveWith<BorderSide>(
+          (states) => states.contains(MaterialState.disabled)
+              ? BorderSide(
+                  width: 1,
+                  color: KColors.blueGray[300]!,
+                )
+              : const BorderSide(
+                  width: 1,
+                  color: KColors.primary,
+                ),
+        ),
+        elevation: MaterialStateProperty.all<double>(0),
+        overlayColor: MaterialStateProperty.all<Color>(
+          KColors.primary.withOpacity(.05),
+        ),
       ),
     );
   }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resume_room/src/core/ui/theme/theme.dart';
 import 'package:resume_room/src/core/ui/widgets/widgets.dart' show Base;
-import 'package:resume_room/src/core/ui/theme/index.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,14 +10,9 @@ class HomePage extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.all(16),
         child: Wrap(
+          spacing: 16,
           runSpacing: 16,
           children: [
-            Text(
-              "Resume Room App",
-              style: Theme.of(context).textTheme.bodyText1?.bold.copyWith(
-                    color: KColors.blueGray[700],
-                  ),
-            ),
             ElevatedButton(
               onPressed: () => "pressed",
               child: const Text("Enabled Button"),
@@ -27,7 +20,15 @@ class HomePage extends StatelessWidget {
             const ElevatedButton(
               onPressed: null,
               child: Text("Disabled Button"),
-            )
+            ),
+            OutlinedButton(
+              onPressed: () => "pressed",
+              child: const Text("Enabled Button"),
+            ),
+            const OutlinedButton(
+              onPressed: null,
+              child: Text("Disabled Button"),
+            ),
           ],
         ),
       ),
