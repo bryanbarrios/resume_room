@@ -12,13 +12,13 @@ class AppTheme {
   static ThemeData lightTheme(BuildContext context) {
     return ThemeData.light().copyWith(
       brightness: Brightness.light,
-      primaryColor: KColors.primary,
-      primaryColorLight: KColors.primaryLightColor,
-      primaryColorDark: KColors.primaryDarkColor,
-      accentColor: KColors.accentColor,
+      primaryColor: KColors.lightThemePrimaryColor,
+      primaryColorLight: KColors.lightThemePrimaryLightColor,
+      primaryColorDark: KColors.lightThemePrimaryDarkColor,
+      accentColor: KColors.lightThemeAccentColor,
       backgroundColor: Colors.white,
       disabledColor: KColors.blueGray[300],
-      buttonColor: KColors.primary,
+      buttonColor: KColors.lightThemePrimaryColor,
       textTheme: _textTheme(context),
       elevatedButtonTheme: _elevatedButtonThemeData(context),
       outlinedButtonTheme: _outlinedButtonThemeData(context),
@@ -57,7 +57,7 @@ class AppTheme {
         backgroundColor: MaterialStateProperty.resolveWith<Color>(
           (states) => states.contains(MaterialState.disabled)
               ? KColors.blueGray[300]!
-              : KColors.primary,
+              : KColors.lightThemePrimaryColor,
         ),
         foregroundColor: MaterialStateProperty.resolveWith<Color>(
           (states) => states.contains(MaterialState.disabled)
@@ -92,7 +92,7 @@ class AppTheme {
         foregroundColor: MaterialStateProperty.resolveWith<Color>(
           (states) => states.contains(MaterialState.disabled)
               ? KColors.blueGray
-              : KColors.primary,
+              : KColors.lightThemePrimaryColor,
         ),
         textStyle: MaterialStateProperty.all<TextStyle>(
           TextStyles.textBase(context)
@@ -117,12 +117,12 @@ class AppTheme {
                 )
               : const BorderSide(
                   width: 1,
-                  color: KColors.primary,
+                  color: KColors.lightThemePrimaryColor,
                 ),
         ),
         elevation: MaterialStateProperty.all<double>(0),
         overlayColor: MaterialStateProperty.all<Color>(
-          KColors.primary.withOpacity(.05),
+          KColors.lightThemePrimaryColor.withOpacity(.05),
         ),
       ),
     );
@@ -135,7 +135,7 @@ class AppTheme {
         foregroundColor: MaterialStateProperty.resolveWith<Color>(
           (states) => states.contains(MaterialState.disabled)
               ? KColors.blueGray
-              : KColors.primary,
+              : KColors.lightThemePrimaryColor,
         ),
         textStyle: MaterialStateProperty.all<TextStyle>(
           TextStyles.textBase(context)
@@ -155,7 +155,7 @@ class AppTheme {
           ),
         ),
         overlayColor: MaterialStateProperty.all<Color>(
-          KColors.primary.withOpacity(.05),
+          KColors.lightThemePrimaryColor.withOpacity(.05),
         ),
       ),
     );
@@ -225,9 +225,9 @@ class AppTheme {
 
   static TextSelectionThemeData _textSelectionThemeData(BuildContext context) {
     return TextSelectionThemeData(
-      cursorColor: KColors.primary,
-      selectionColor: KColors.primary.withOpacity(0.2),
-      selectionHandleColor: KColors.primary,
+      cursorColor: KColors.lightThemePrimaryColor,
+      selectionColor: KColors.lightThemePrimaryColor.withOpacity(0.2),
+      selectionHandleColor: KColors.lightThemePrimaryColor,
     );
   }
 }
