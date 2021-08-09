@@ -25,6 +25,7 @@ class AppTheme {
       textButtonTheme: _textButtonThemeData(context),
       inputDecorationTheme: _inputDecorationThemeData(context),
       textSelectionTheme: _textSelectionThemeData(context),
+      appBarTheme: _appBarThemeData(context),
     );
   }
 
@@ -235,6 +236,22 @@ class AppTheme {
       cursorColor: KColors.lightThemePrimaryColor,
       selectionColor: KColors.lightThemePrimaryColor.withOpacity(0.2),
       selectionHandleColor: KColors.lightThemePrimaryColor,
+    );
+  }
+
+  static AppBarTheme _appBarThemeData(BuildContext context) {
+    return AppBarTheme(
+      backwardsCompatibility: false,
+      elevation: 0,
+      backgroundColor: Colors.white,
+      titleTextStyle: TextStyles.textBase(context)
+          .copyWith(
+            fontWeight: FontWeight.w700,
+            color: KColors.blueGray[700],
+          )
+          .apply(
+            fontFamily: 'Plus Jakarta Sans',
+          ),
     );
   }
 }

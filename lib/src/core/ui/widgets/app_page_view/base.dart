@@ -12,6 +12,7 @@ class Base extends StatelessWidget {
         title: const Text("Resume Room"),
       ),
       body: body,
+      backgroundColor: Theme.of(context).backgroundColor,
     );
   }
 }
