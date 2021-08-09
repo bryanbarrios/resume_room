@@ -9,12 +9,26 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Base(
-      body: Center(
-        child: Text(
-          "Resume Room App",
-          style: Theme.of(context).textTheme.bodyText1?.bold.copyWith(
-                color: KColors.blueGray[700],
-              ),
+      body: Container(
+        padding: const EdgeInsets.all(16),
+        child: Wrap(
+          runSpacing: 16,
+          children: [
+            Text(
+              "Resume Room App",
+              style: Theme.of(context).textTheme.bodyText1?.bold.copyWith(
+                    color: KColors.blueGray[700],
+                  ),
+            ),
+            ElevatedButton(
+              onPressed: () => "pressed",
+              child: const Text("Enabled Button"),
+            ),
+            const ElevatedButton(
+              onPressed: null,
+              child: Text("Disabled Button"),
+            )
+          ],
         ),
       ),
     );
