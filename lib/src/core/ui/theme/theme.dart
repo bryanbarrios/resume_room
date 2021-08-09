@@ -16,7 +16,7 @@ class AppTheme {
       primaryColorLight: KColors.lightThemePrimaryLightColor,
       primaryColorDark: KColors.lightThemePrimaryDarkColor,
       accentColor: KColors.lightThemeAccentColor,
-      backgroundColor: Colors.white,
+      backgroundColor: KColors.lightThemeBackgroundColor,
       disabledColor: KColors.blueGray[300],
       buttonColor: KColors.lightThemePrimaryColor,
       textTheme: _textTheme(context),
@@ -29,7 +29,14 @@ class AppTheme {
   }
 
   static ThemeData get darkTheme {
-    return ThemeData.dark().copyWith();
+    return ThemeData.dark().copyWith(
+      brightness: Brightness.dark,
+      primaryColor: KColors.darkThemePrimaryColor,
+      primaryColorLight: KColors.darkThemePrimaryLightColor,
+      primaryColorDark: KColors.darkThemePrimaryDarkColor,
+      accentColor: KColors.darkThemeAccentColor,
+      backgroundColor: KColors.darkThemeBackgroundColor,
+    );
   }
 
   static TextTheme _textTheme(BuildContext context) {

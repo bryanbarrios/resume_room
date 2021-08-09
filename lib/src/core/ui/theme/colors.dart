@@ -9,6 +9,12 @@ class KColors {
   static const Color lightThemeAccentColor = Color(0xffffBF69);
   static const Color lightThemeBackgroundColor = Color(0xffffffff);
 
+  static const Color darkThemePrimaryColor = Color(0xff023047);
+  static const Color darkThemePrimaryDarkColor = Color(0xff000720);
+  static const Color darkThemePrimaryLightColor = Color(0xff365973);
+  static const Color darkThemeAccentColor = Color(0xffFB8500);
+  static const Color darkThemeBackgroundColor = Color(0xff023047);
+
   static const Color white = Color(0xffffffff);
   static const Color black = Color(0xff000000);
 

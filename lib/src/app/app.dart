@@ -23,6 +23,7 @@ class _App extends StatelessWidget {
     return MaterialApp(
       title: 'Resume Room',
       theme: AppTheme.lightTheme(context),
+      darkTheme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
