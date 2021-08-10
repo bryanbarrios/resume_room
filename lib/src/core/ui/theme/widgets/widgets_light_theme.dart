@@ -16,6 +16,9 @@ class WidgetsLightThemes {
               ? KColors.blueGray
               : KColors.white,
         ),
+        minimumSize: MaterialStateProperty.all<Size>(
+          const Size(double.infinity, 48),
+        ),
         textStyle: MaterialStateProperty.all<TextStyle>(
           TextStyles.textBase(context).copyWith(
             fontWeight: FontWeight.w600,
@@ -40,6 +43,9 @@ class WidgetsLightThemes {
           (states) => states.contains(MaterialState.disabled)
               ? KColors.blueGray
               : KColors.lightThemePrimaryColor,
+        ),
+        minimumSize: MaterialStateProperty.all<Size>(
+          const Size(double.infinity, 48),
         ),
         textStyle: MaterialStateProperty.all<TextStyle>(
           TextStyles.textBase(context).copyWith(

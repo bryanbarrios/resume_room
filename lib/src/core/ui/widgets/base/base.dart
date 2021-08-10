@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Base extends StatelessWidget {
-  const Base({Key? key, required this.body}) : super(key: key);
+  const Base({Key? key, required this.body, this.appBar}) : super(key: key);
 
   final Widget body;
+  final PreferredSize? appBar;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Resume Room"),
-      ),
+      appBar: appBar,
       body: body,
       backgroundColor: Theme.of(context).backgroundColor,
     );

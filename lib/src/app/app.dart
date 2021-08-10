@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:resume_room/src/core/constants/app_constants.dart';
 import 'package:resume_room/src/core/ui/theme/theme.dart';
-import 'package:resume_room/src/features/home/home.dart';
+import 'package:resume_room/src/features/landing/landing.dart' show LandingPage;
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -21,11 +22,11 @@ class _App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Resume Room',
+      title: kAppName,
       theme: AppTheme.getThemeFromKey(ThemeType.light, context),
       darkTheme: AppTheme.getThemeFromKey(ThemeType.dark, context),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const LandingPage(),
     );
   }
 }
