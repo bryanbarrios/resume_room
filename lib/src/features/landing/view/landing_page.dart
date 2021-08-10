@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:resume_room/src/core/constants/app_constants.dart';
 import 'package:resume_room/src/core/constants/asset_constants.dart';
+import 'package:resume_room/src/core/ui/widgets/rounded_icon_button/rounded_icon_button.dart';
 import 'package:resume_room/src/core/ui/widgets/widgets.dart' show Base;
 import 'package:resume_room/src/core/ui/theme/index.dart';
 import 'package:resume_room/src/l10n/l10n.dart';
@@ -19,23 +21,30 @@ class LandingPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: SvgPicture.asset(
-                  kBrandLogo,
-                  semanticsLabel: kAppName,
-                  width: 72.w,
-                  height: 72.h,
-                ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SvgPicture.asset(
+                    kBrandLogo,
+                    semanticsLabel: kAppName,
+                    width: 72.w,
+                    height: 72.h,
+                  ),
+                  RoundedIconButton(
+                    onPressed: () => "pressed",
+                    icon: Icons.close,
+                  )
+                ],
               ),
               SizedBox(
-                height: 32.h,
+                height: 36.h,
               ),
               SvgPicture.asset(
                 kNetworkingImage,
                 semanticsLabel: kAppName,
-                width: 310.w,
-                height: 310.h,
+                width: 300.w,
+                height: 300.h,
               ),
               SizedBox(
                 height: 24.h,

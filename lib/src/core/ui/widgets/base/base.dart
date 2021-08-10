@@ -4,7 +4,7 @@ class Base extends StatelessWidget {
   const Base({Key? key, required this.body, this.appBar}) : super(key: key);
 
   final Widget body;
-  final PreferredSize? appBar;
+  final AppBar? appBar;
 
   @override
   Widget build(BuildContext context) {
