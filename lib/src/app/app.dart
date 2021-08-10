@@ -22,8 +22,9 @@ class _App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Resume Room',
-      theme: AppTheme.lightTheme(context),
-      darkTheme: AppTheme.darkTheme,
+      theme: AppTheme.getThemeFromKey(ThemeType.light, context),
+      darkTheme: AppTheme.getThemeFromKey(ThemeType.dark, context),
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );

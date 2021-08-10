@@ -1,6 +1,6 @@
 part of './index.dart';
 
-extension FontWeightX on TextStyle {
+extension FontHelper on TextStyle {
   TextStyle get black => copyWith(fontWeight: FontWeight.w900);
   TextStyle get extraBold => copyWith(fontWeight: FontWeight.w800);
   TextStyle get bold => copyWith(fontWeight: FontWeight.w700);
@@ -10,4 +10,11 @@ extension FontWeightX on TextStyle {
   TextStyle get light => copyWith(fontWeight: FontWeight.w300);
   TextStyle get extraLight => copyWith(fontWeight: FontWeight.w200);
   TextStyle get thin => copyWith(fontWeight: FontWeight.w100);
+}
+
+extension ThemeHelper on BuildContext {
+  ThemeData theme() => Theme.of(this);
+  ThemeType themeType() => Theme.of(this).brightness == Brightness.light
+      ? ThemeType.light
+      : ThemeType.dark;
 }
