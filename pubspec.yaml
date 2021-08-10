@@ -22,6 +22,7 @@ dev_dependencies:
   flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^1.2.1
 
 flutter:
   uses-material-design: true
@@ -51,3 +52,7 @@ flutter:
         - asset: assets/font/PlusJakartaSans-ExtraLightItalic.ttf
           style: italic
         - asset: assets/font/PlusJakartaSans-ExtraLight.ttf
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/brand_logo.png
