@@ -23,7 +23,7 @@ class _App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: context.l10n.appTitle,
+      title: 'Resume Room',
       theme: AppTheme.getThemeFromKey(ThemeType.light, context),
       darkTheme: AppTheme.getThemeFromKey(ThemeType.dark, context),
       debugShowCheckedModeBanner: false,

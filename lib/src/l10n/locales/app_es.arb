@@ -1,3 +1,8 @@
 {
-	"appTitle": "Resume Room"
+	"@@locale": "es",
+	"appTitle": "Resume Room",
+	"signIn": "Iniciar sesión",
+	"createAccount": "Crear una cuenta",
+	"landingActionTextPart1": "Únete a la futura red de contactos para ",
+	"landingActionTextPart2": "conocer personas brillantes como tú."
 }

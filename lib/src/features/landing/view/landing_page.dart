@@ -5,6 +5,7 @@ import 'package:resume_room/src/core/constants/app_constants.dart';
 import 'package:resume_room/src/core/constants/asset_constants.dart';
 import 'package:resume_room/src/core/ui/widgets/widgets.dart' show Base;
 import 'package:resume_room/src/core/ui/theme/index.dart';
+import 'package:resume_room/src/l10n/l10n.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -42,11 +43,11 @@ class LandingPage extends StatelessWidget {
               RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
-                  text: "Únete a la futura red de contactos para ",
+                  text: context.l10n.landingActionTextPart1,
                   style: Theme.of(context).textTheme.bodyText1,
                   children: <TextSpan>[
                     TextSpan(
-                      text: "conocer personas brillantes como tú",
+                      text: context.l10n.landingActionTextPart2,
                       style: Theme.of(context).textTheme.bodyText1?.bold,
                     ),
                   ],
@@ -55,14 +56,14 @@ class LandingPage extends StatelessWidget {
               const Spacer(),
               OutlinedButton(
                 onPressed: () => "pressed",
-                child: const Text("Iniciar sesión"),
+                child: Text(context.l10n.signIn),
               ),
               SizedBox(
                 height: 16.h,
               ),
               ElevatedButton(
                 onPressed: () => "pressed",
-                child: const Text("Crear una cuenta"),
+                child: Text(context.l10n.createAccount),
               )
             ],
           ),
