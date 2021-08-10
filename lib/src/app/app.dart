@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -29,9 +30,14 @@ class _App extends StatelessWidget {
       title: kAppName,
       theme: AppTheme.getThemeFromKey(ThemeType.light, context),
       darkTheme: AppTheme.getThemeFromKey(ThemeType.dark, context),
+      builder: BotToastInit(),
       debugShowCheckedModeBanner: false,
       routeInformationParser: _appRouter.defaultRouteParser(),
-      routerDelegate: _appRouter.delegate(),
+      routerDelegate: _appRouter.delegate(
+        navigatorObservers: () => [
+          BotToastNavigatorObserver(),
+        ],
+      ),
       key: _appRouter.key,
       localizationsDelegates: const [
         AppLocalizations.delegate,
