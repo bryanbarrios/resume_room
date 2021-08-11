@@ -12,5 +12,9 @@
 	"email": "Email",
 	"emailPlaceholder": "Enter your email",
 	"password": "Password",
-	"passwordCreatePlaceholder": "Create a strong password"
+	"passwordCreatePlaceholder": "Create a strong password",
+	"required": "* Required",
+	"invalidEmail": "Invalid email.",
+	"passwordLength": "The password must contain at least 8 characters.",
+  	"insecurePassword": "The password must contain uppercase, lowercase, numbers and special characters."
 }

@@ -12,5 +12,9 @@
 	"email": "Correo electrónico",
 	"emailPlaceholder": "Ingrese su correo electrónico",
 	"password": "Contraseña",
-	"passwordCreatePlaceholder": "Cree una contraseña segura"
+	"passwordCreatePlaceholder": "Cree una contraseña segura",
+	"required": "* Requerido",
+	"invalidEmail": "Correo electrónico inválido.",
+	"passwordLength": "La contraseña debe contener mínimo 8 caracteres.",
+  	"insecurePassword": "La contraseña debe tener mayúsculas, minúsculas, números y caracteres especiales."
 }

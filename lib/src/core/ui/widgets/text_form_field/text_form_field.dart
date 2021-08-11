@@ -10,7 +10,7 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText,
     this.enabled,
     this.obscureText = false,
-    this.maxLines,
+    this.maxLines = 1,
     this.keyboardType,
     this.controller,
     this.textInputAction,
@@ -48,6 +48,7 @@ class CustomTextFormField extends StatelessWidget {
         TextFormField(
           decoration: InputDecoration(
             hintText: hintText,
+            errorMaxLines: 2,
           ),
           controller: controller,
           validator: validator,
