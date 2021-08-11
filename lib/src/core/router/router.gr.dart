@@ -7,6 +7,8 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:flutter/material.dart' as _i2;
 import 'package:resume_room/src/features/auth/auth.dart' as _i4;
+import 'package:resume_room/src/features/auth/presentation/views/forgot_password_page.dart'
+    as _i5;
 import 'package:resume_room/src/features/landing/landing.dart' as _i3;
 
 class AppRouter extends _i1.RootStackRouter {
@@ -41,6 +43,15 @@ class AppRouter extends _i1.RootStackRouter {
         transitionsBuilder: _i1.TransitionsBuilders.fadeIn,
         durationInMilliseconds: 300,
         opaque: true,
+        barrierDismissible: false),
+    ForgotPasswordScreenRoute.name: (routeData) => _i1.CustomPage<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i5.ForgotPasswordScreen();
+        },
+        transitionsBuilder: _i1.TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 300,
+        opaque: true,
         barrierDismissible: false)
   };
 
@@ -50,7 +61,8 @@ class AppRouter extends _i1.RootStackRouter {
             path: '/', redirectTo: '/landing', fullMatch: true),
         _i1.RouteConfig(LandingPageRoute.name, path: '/landing'),
         _i1.RouteConfig(SignUpPageRoute.name, path: '/sign-up'),
-        _i1.RouteConfig(SignInPageRoute.name, path: '/sign-in')
+        _i1.RouteConfig(SignInPageRoute.name, path: '/sign-in'),
+        _i1.RouteConfig(ForgotPasswordScreenRoute.name, path: '/reset-password')
       ];
 }
 
@@ -70,4 +82,10 @@ class SignInPageRoute extends _i1.PageRouteInfo {
   const SignInPageRoute() : super(name, path: '/sign-in');
 
   static const String name = 'SignInPageRoute';
+}
+
+class ForgotPasswordScreenRoute extends _i1.PageRouteInfo {
+  const ForgotPasswordScreenRoute() : super(name, path: '/reset-password');
+
+  static const String name = 'ForgotPasswordScreenRoute';
 }

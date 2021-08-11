@@ -67,14 +67,15 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 CustomTextFormField(
                   labelText: context.l10n.password,
-                  hintText: context.l10n.passwordCreatePlaceholder,
+                  hintText: context.l10n.passwordPlaceholder,
                   controller: _passwordController,
                   obscureText: true,
                   textInputAction: TextInputAction.done,
                   validator: (value) => value!.validateEmpty(context),
                 ),
                 GestureDetector(
-                  onTap: () => "pressed",
+                  onTap: () async =>
+                      await appRouter.push(const ForgotPasswordScreenRoute()),
                   child: Text(
                     context.l10n.forgotYourPassword,
                     style: Theme.of(context)
