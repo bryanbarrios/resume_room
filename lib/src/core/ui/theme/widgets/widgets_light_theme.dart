@@ -168,6 +168,7 @@ class WidgetsLightThemes {
     return AppBarTheme(
       backwardsCompatibility: false,
       elevation: 0,
+      foregroundColor: KColors.blueGray[700],
       backgroundColor: KColors.lightThemeBackgroundColor,
       titleTextStyle: TextStyles.textBase(context).copyWith(
         fontWeight: FontWeight.w700,

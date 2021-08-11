@@ -4,5 +4,13 @@
 	"signIn": "Sign in",
 	"createAccount": "Create an account",
 	"landingActionTextPart1": "Join the future network to ",	
-	"landingActionTextPart2": "meet brilliant people like you."
+	"landingActionTextPart2": "meet brilliant people like you.",
+	"firstName": "First name",
+	"firstNamePlaceholder": "Enter your first name",
+	"lastName": "Last name",
+	"lastNamePlaceholder": "Enter your last name",
+	"email": "Email",
+	"emailPlaceholder": "Enter your email",
+	"password": "Password",
+	"passwordCreatePlaceholder": "Create a strong password"
 }

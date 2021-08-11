@@ -4,5 +4,13 @@
 	"signIn": "Iniciar sesión",
 	"createAccount": "Crear una cuenta",
 	"landingActionTextPart1": "Únete a la futura red de contactos para ",
-	"landingActionTextPart2": "conocer personas brillantes como tú."
+	"landingActionTextPart2": "conocer personas brillantes como tú.",
+	"firstName": "Nombre",
+	"firstNamePlaceholder": "Ingrese su nombre",
+	"lastName": "Apellido",
+	"lastNamePlaceholder": "Ingrese su apellido",
+	"email": "Correo electrónico",
+	"emailPlaceholder": "Ingrese su correo electrónico",
+	"password": "Contraseña",
+	"passwordCreatePlaceholder": "Cree una contraseña segura"
 }
