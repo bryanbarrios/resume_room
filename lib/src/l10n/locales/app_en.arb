@@ -2,7 +2,7 @@
 	"@@locale": "en",
 	"appTitle": "Resume Room",
 	"signIn": "Sign in",
-	"createAccount": "Create an account",
+	"createAccount": "Create account",
 	"landingActionTextPart1": "Join the future network to ",	
 	"landingActionTextPart2": "meet brilliant people like you.",
 	"firstName": "First name",
@@ -16,5 +16,9 @@
 	"required": "* Required",
 	"invalidEmail": "Invalid email.",
 	"passwordLength": "The password must contain at least 8 characters.",
-  	"insecurePassword": "The password must contain uppercase, lowercase, numbers and special characters."
+  	"insecurePassword": "The password must contain uppercase, lowercase, numbers and special characters.",
+	"forgotYourPassword": "Forgot your password?",
+	"notAMemberYet": "Not a member yet?",
+	"createAnAccount": "Create an account",
+	"alreadyAMember": "Already a member?"
 }

@@ -32,6 +32,15 @@ class AppRouter extends _i1.RootStackRouter {
         transitionsBuilder: _i1.TransitionsBuilders.fadeIn,
         durationInMilliseconds: 300,
         opaque: true,
+        barrierDismissible: false),
+    SignInPageRoute.name: (routeData) => _i1.CustomPage<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i4.SignInPage();
+        },
+        transitionsBuilder: _i1.TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 300,
+        opaque: true,
         barrierDismissible: false)
   };
 
@@ -40,7 +49,8 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig('/#redirect',
             path: '/', redirectTo: '/landing', fullMatch: true),
         _i1.RouteConfig(LandingPageRoute.name, path: '/landing'),
-        _i1.RouteConfig(SignUpPageRoute.name, path: '/sign-up')
+        _i1.RouteConfig(SignUpPageRoute.name, path: '/sign-up'),
+        _i1.RouteConfig(SignInPageRoute.name, path: '/sign-in')
       ];
 }
 
@@ -54,4 +64,10 @@ class SignUpPageRoute extends _i1.PageRouteInfo {
   const SignUpPageRoute() : super(name, path: '/sign-up');
 
   static const String name = 'SignUpPageRoute';
+}
+
+class SignInPageRoute extends _i1.PageRouteInfo {
+  const SignInPageRoute() : super(name, path: '/sign-in');
+
+  static const String name = 'SignInPageRoute';
 }

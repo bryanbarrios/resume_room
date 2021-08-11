@@ -12,25 +12,21 @@ import 'package:resume_room/src/l10n/l10n.dart';
 import 'package:resume_room/src/core/ui/theme/index.dart';
 import 'package:resume_room/src/core/extensions/string.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _SignInPageState createState() => _SignInPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
-  TextEditingController? _firstNameController;
-  TextEditingController? _lastNameController;
   TextEditingController? _emailController;
   TextEditingController? _passwordController;
 
   @override
   void initState() {
     super.initState();
-    _firstNameController = TextEditingController(text: '');
-    _lastNameController = TextEditingController(text: '');
     _emailController = TextEditingController(text: '');
     _passwordController = TextEditingController(text: '');
   }
@@ -59,22 +55,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 Text(
-                  context.l10n.createAccount,
+                  context.l10n.signIn,
                   style: Theme.of(context).textTheme.headline6?.bold,
-                ),
-                CustomTextFormField(
-                  labelText: context.l10n.firstName,
-                  hintText: context.l10n.firstNamePlaceholder,
-                  controller: _firstNameController,
-                  textInputAction: TextInputAction.next,
-                  validator: (value) => value!.validateEmpty(context),
-                ),
-                CustomTextFormField(
-                  labelText: context.l10n.lastName,
-                  hintText: context.l10n.lastNamePlaceholder,
-                  controller: _lastNameController,
-                  textInputAction: TextInputAction.next,
-                  validator: (value) => value!.validateEmpty(context),
                 ),
                 CustomTextFormField(
                   labelText: context.l10n.email,
@@ -89,25 +71,36 @@ class _SignUpPageState extends State<SignUpPage> {
                   controller: _passwordController,
                   obscureText: true,
                   textInputAction: TextInputAction.done,
-                  validator: (value) => value!.validatePassword(context),
+                  validator: (value) => value!.validateEmpty(context),
+                ),
+                GestureDetector(
+                  onTap: () => "pressed",
+                  child: Text(
+                    context.l10n.forgotYourPassword,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        ?.medium
+                        .copyWith(color: KColors.blueGray),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: _onSubmit,
-                  child: Text(context.l10n.createAccount),
+                  child: Text(context.l10n.signIn),
                 ),
                 Center(
                   child: RichText(
                     text: TextSpan(
                       children: <TextSpan>[
                         TextSpan(
-                          text: "${context.l10n.alreadyAMember} ",
+                          text: "${context.l10n.notAMemberYet} ",
                           style: Theme.of(context)
                               .textTheme
                               .caption
                               ?.copyWith(color: KColors.blueGray),
                         ),
                         TextSpan(
-                          text: context.l10n.signIn,
+                          text: context.l10n.createAnAccount,
                           style: Theme.of(context)
                               .textTheme
                               .caption
@@ -115,12 +108,12 @@ class _SignUpPageState extends State<SignUpPage> {
                               .copyWith(color: Theme.of(context).primaryColor),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () async =>
-                                await appRouter.push(const SignInPageRoute()),
+                                await appRouter.push(const SignUpPageRoute()),
                         ),
                       ],
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

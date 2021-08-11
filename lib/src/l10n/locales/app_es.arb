@@ -2,7 +2,7 @@
 	"@@locale": "es",
 	"appTitle": "Resume Room",
 	"signIn": "Iniciar sesión",
-	"createAccount": "Crear una cuenta",
+	"createAccount": "Crear cuenta",
 	"landingActionTextPart1": "Únete a la futura red de contactos para ",
 	"landingActionTextPart2": "conocer personas brillantes como tú.",
 	"firstName": "Nombre",
@@ -16,5 +16,9 @@
 	"required": "* Requerido",
 	"invalidEmail": "Correo electrónico inválido.",
 	"passwordLength": "La contraseña debe contener mínimo 8 caracteres.",
-  	"insecurePassword": "La contraseña debe tener mayúsculas, minúsculas, números y caracteres especiales."
+  	"insecurePassword": "La contraseña debe tener mayúsculas, minúsculas, números y caracteres especiales.",
+	"forgotYourPassword": "¿Ha olvidado su contraseña?",
+	"notAMemberYet": "¿Aún no eres un miembro?",
+	"createAnAccount": "Crea una cuenta",
+	"alreadyAMember": "¿Ya eres miembro?"
 }

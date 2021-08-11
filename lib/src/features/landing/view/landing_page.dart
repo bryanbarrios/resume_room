@@ -75,7 +75,9 @@ class LandingPage extends StatelessWidget {
                         ),
                         const Spacer(),
                         OutlinedButton(
-                          onPressed: () => "pressed",
+                          onPressed: () async => await appRouter.push(
+                            const SignInPageRoute(),
+                          ),
                           child: Text(context.l10n.signIn),
                         ),
                         SizedBox(
